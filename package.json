@@ -1,24 +1,18 @@
 {
-	"name": "scad-js",
-	"version": "0.6.0",
-	"description": "Generate OpenSCAD solid models with javascript",
+	"name": "scad-ts",
+	"version": "1.0.0",
+	"description": "Generate OpenSCAD solid models with typescript",
 	"type": "module",
 	"main": "./src/index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com/20lives/scad-js.git"
-	},
-	"author": "20lives",
-	"license": "MIT",
 	"private": false,
 	"bugs": {
-		"url": "https://github.com/20lives/scad-js/issues"
+		"url": "https://github.com/florentpergoud/scad-js-starter-typescript/issues"
 	},
-	"homepage": "https://github.com/20lives/scad-js#readme",
+	"homepage": "https://github.com/florentpergoud/scad-js-starter-typescript#readme",
 	"scripts": {
 		"lint": "eslint src/.",
 		"dev": "openscad dist/output.scad & nodemon --watch 'src/**' --ext 'ts' --exec 'yarn tsc && node --experimental-specifier-resolution=node dist/index.js'",
-		"render": "yarn tsc && node --experimental-specifier-resolution=node dist/index.js && openscad out/output.scad -o out/output.stl"
+		"render": "yarn tsc && node --experimental-specifier-resolution=node dist/index.js && openscad dist/output.scad -o dist/output.stl"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.9",
